@@ -1,22 +1,27 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     mainView: {
-        flex: 1, 
-    },
-    btnView: {
         flex: 1,
-        flexDirection: 'row', 
+        justifyContent: 'space-between',
     },
-    btnNumView: {
+    symbolsRow: {
+        flex: 0.3,
+        flexDirection: 'row',
+        backgroundColor: '#2d364c'
+    },
+    symbolView: {
+        flexGrow: 1,
+        flexDirection: 'row',
+    },
+    touchBtn: {
         flex: 1,
-        backgroundColor: '#2d364c', 
-        justifyContent: 'center', 
         alignItems: 'center',
+        justifyContent: 'center',
     },
     btnText: {
         fontSize: 35,
-        color: '#ecf0f1'
+        color: '#fff'
     }
 })
 
