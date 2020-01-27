@@ -30,7 +30,9 @@ const App = () => {
           } else if (newSymbol === 'OK') {
             return setSymbol
           }
-          setSymbol(symbol + newSymbol)
+          if (symbol.length < 5) {
+            setSymbol(symbol + newSymbol)
+          }
         }} />
       </View>
     </View>
