@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, StatusBar } from 'react-native';
 import TouchableButtons from './components/Buttons/TouchableButtons'
+import styles from './components/Styles/AppStyles'
 
 const App = () => {
   const [symbol, setSymbol] = useState("");
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ flex: 0.1, width: '100%', backgroundColor: '#451245' }}>
-        <Text>Viesssw</Text>
+    <View style={styles.mainContainer}>
+      <StatusBar barStyle="light-content" backgroundColor="#2d364c" />
+      <View style={styles.mainView}>
+        <Text style={styles.mainViewText}>AVAST<Text style={[styles.mainViewText, { color: '#fff', fontWeight: 'bold' }]}> PASSWORDS</Text></Text>
       </View>
-      <View style={{ flex: 0.2, width: '100%', backgroundColor: '#252536' }}>
-        <Text>View</Text>
+      <View style={styles.secondView}>
+        <Text style={styles.secondViewText}>Enter Master Password</Text>
       </View>
-      <View style={{ flex: 0.3, width: '100%', backgroundColor: '#363636', justifyContent: 'center', }}>
+      <View style={styles.textInputView}>
         <TextInput
-          placeholder="1234"
+          placeholderTextColor={'#d35400'}
           value={symbol}
-          style={{ backgroundColor: '#451258', height: 90, fontSize: 50, paddingLeft: 50, paddingRight: 50 }}
+          maxLength={5}
+          style={styles.textInput}
         />
       </View>
-      <View style={{ flex: 0.6, backgroundColor: '#2d364c', justifyContent: 'space-between', }}>
+      <View style={styles.btnView}>
         <TouchableButtons setSymbol={newSymbol => {
           if (newSymbol === 'del') {
-            return setSymbol(symbol.slice(0, -8))
+            return setSymbol(symbol.slice(0, -1))
+          } else if (newSymbol === 'OK') {
+            return setSymbol
           }
           setSymbol(symbol + newSymbol)
         }} />

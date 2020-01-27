@@ -32,7 +32,7 @@ const symbols = [
         value: '9',
     },
     {
-        value: '',
+        value: 'OK',
     },
     {
         value: '0',

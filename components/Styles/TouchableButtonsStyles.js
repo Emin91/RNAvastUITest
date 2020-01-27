@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
     },
     btnText: {
         fontSize: 35,
-        color: '#fff'
+        color: '#fff',
+        fontFamily: 'SamsungSans-Regular',
     }
 })
 
