@@ -29,8 +29,8 @@ const HomeScreen = (props) => {
           if (newSymbol === 'del') {
             return setSymbol(symbol.slice(0, -1))
           } else if (newSymbol === 'OK') {
-             if(symbol === "12345") {
-                 alert(`Password is: ${symbol}`)
+             if(symbol === "") {
+                 //alert(`Password is: ${symbol}`)
                  navigation.navigate('L2')
              } else if(symbol != '12345') {
                 alert("Please type correct password")
