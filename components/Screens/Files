@@ -1,0 +1,6 @@
+<AddButton changeBg={this.changeColor}/>
+
+
+const Some = ({changeBg}) => {
+    onPress={changeBg}
+}

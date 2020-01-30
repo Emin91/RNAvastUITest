@@ -17,24 +17,22 @@ const TabContainer = createMaterialTopTabNavigator({
     L1: {
         screen: Tab1,
         navigationOptions: {
-            tabBarOptions: { 
-            },
             tabBarLabel: () => { return null },
-            tabBarIcon: <IconStar name="star" color='#fff' size={20} />,
+            tabBarIcon: <IconStar name="star" color='#fff' size={22} />,
         }
     },
     L2: {
         screen: Tab2,
         navigationOptions: {
             tabBarLabel: () => { return null },
-            tabBarIcon: <IconKey name="key" color='#fff' size={20} />,
+            tabBarIcon: <IconKey name="key" color='#fff' size={22} />,
         }
     },
     L3: {
         screen: Tab3,
         navigationOptions: {
             tabBarLabel: () => { return null },
-            tabBarIcon: <IconList name="list-alt" color='#fff' size={20} />
+            tabBarIcon: <IconList name="list-alt" color='#fff' size={22} />
         }
     },
 },
