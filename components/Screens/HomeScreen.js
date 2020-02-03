@@ -29,12 +29,12 @@ const HomeScreen = (props) => {
           if (newSymbol === 'del') {
             return setSymbol(symbol.slice(0, -1))
           } else if (newSymbol === 'OK') {
-             if(symbol === "") {
-                 //alert(`Password is: ${symbol}`)
-                 navigation.navigate('L2')
-             } else if(symbol != '12345') {
-                alert("Please type correct password")
-             }
+            if (symbol === "12345") {
+              alert(`Password is: ${symbol}`)
+              navigation.navigate('L2')
+            } else if (symbol != '12345') {
+              alert("Please type correct password")
+            }
             //BackHandler.exitApp()
             return setSymbol
           }
@@ -48,8 +48,8 @@ const HomeScreen = (props) => {
 }
 
 HomeScreen.navigationOptions = {
-    headerTransparent: true,
-    title: ''
+  headerTransparent: true,
+  title: ''
 }
 
 export default HomeScreen

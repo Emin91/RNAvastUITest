@@ -1,0 +1,11 @@
+export const MAIN_COLOR = "#2d364c"
+export const WHITE = "#fff"
+export const DARK = "#141414"
+export const RED = "#fc0303"
+export const GREEN = "#00ad23"
+
+export const PUMPKIN = "#d35400"
+export const GREEN_SEA = "#27ae60"
+export const PINK = "#ff0037"
+export const BLUE = "#008cff"
+export const WISTERIA = "#8e44ad"

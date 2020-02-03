@@ -32,7 +32,7 @@ const TabContainer = createMaterialTopTabNavigator({
         screen: Tab3,
         navigationOptions: {
             tabBarLabel: () => { return null },
-            tabBarIcon: <IconList name="list-alt" color='#fff' size={22} />
+            tabBarIcon: <IconStar name="color-lens" color='#fff' size={22} />
         }
     },
 },

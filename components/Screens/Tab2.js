@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Text, View, Button } from 'react-native'
+import { useSelector } from 'react-redux';
 
-export default class Tab1 extends Component {
-    render() {
-        return (
-            <View style={{flex: 1, backgroundColor: '#124659'}}>
-                <Text> Tab2 </Text>
-            </View>
-        )
-    }
+export default function Tab1() {
+    const bgColor = useSelector(state => state.settings.bgColor);
+    return (
+        <View style={{ flex: 1, backgroundColor: bgColor }}>
+            <Text> Tab2 </Text>
+        </View>
+    )
 }

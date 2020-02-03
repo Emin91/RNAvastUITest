@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 import { Text, View, TouchableNativeFeedback } from 'react-native'
 import * as colors from '../assets/const/Colors'
-import * as actions from '../../actions/index'
 import styles from '../Styles/ColorButtonsStyles'
 import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux';
-
+import * as actions from '../../actions/index'
 
 const allColors = [
     colors.PUMPKIN,
@@ -18,15 +16,14 @@ const allColors2 = [
     colors.MAIN_COLOR,
 ]
 
-
-const Tab3 = () => {
+console.log('actions', actions)
+const ColorButtons = (props) => {
     const dispatch = useDispatch();
-    const bgColor = useSelector(state => state.settings.bgColor);
 
     return (
-        <View style={{ flex: 1, backgroundColor: bgColor, }}>
+        <View style={styles.mainView}>
             <View style={styles.textView}>
-                <Text style={styles.text}>Choose background color</Text>
+                <Text style={styles.text}>{props.title}</Text>
             </View>
             <View style={styles.colorBtnView}>
                 {
@@ -56,4 +53,4 @@ const Tab3 = () => {
     )
 }
 
-export default Tab3
+export default ColorButtons
